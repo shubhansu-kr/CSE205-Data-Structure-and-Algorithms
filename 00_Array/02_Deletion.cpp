@@ -1,4 +1,4 @@
-// Array Traversal
+// Array Deletion 
 
 #include <bits/stdc++.h>
 using namespace std;
