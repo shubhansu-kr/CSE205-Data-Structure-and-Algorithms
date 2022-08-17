@@ -49,9 +49,9 @@ int insertElement(int *Arr, int &x, int &n)
     }
 
     // Step2: Shift all the elements to the right
-    for (int i = ind; i < x; ++i)
+    for (int i = x; i > ind; --i)
     {
-        Arr[i + 1] = Arr[i];
+        Arr[i] = Arr[i-1];
     }
 
     // Step3: Insert the element at the given index
