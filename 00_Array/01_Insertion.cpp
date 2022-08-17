@@ -1,4 +1,4 @@
-// Array Traversal
+// Array Insertion
 
 #include <bits/stdc++.h>
 using namespace std;
