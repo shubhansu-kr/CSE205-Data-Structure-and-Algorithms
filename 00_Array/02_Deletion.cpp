@@ -62,6 +62,37 @@ int deleteElement(int *Arr, int &x, int &n)
     return 1;
 }
 
+int deleteByIndex(int *Arr, int &x, int &n) {
+    // Check if there is element in array to delete 
+    if (x == 0 ) {
+        cout << "Not enough element to delete" << endl;
+        return -1;
+    }
+
+    // Take user input 
+    int ind ;
+    cout << "Enter index to delete: " ;
+    cin >> ind; 
+
+    // Check if input index in within range
+    if (ind >= x) {
+        cout << "Index out of range" << endl;
+        return -1; 
+    }
+
+    // Shift the elements 
+    for (int i = ind; i < x-1; ++i)
+    {
+        Arr[i] = Arr[i+1];
+    }
+    
+    // Update the number of elements 
+    --x;
+
+    // Sucessful deletion 
+    return 1;
+}
+
 void traverseArray(int *A, int &x, int &n)
 {
     for (int i = 0; i < x; ++i)
@@ -82,6 +113,15 @@ int main()
     int x = setArr(Arr, n);
     traverseArray(Arr, x, n);
     if (deleteElement(Arr, x, n))
+    {
+        cout << "Deletion Sucessful" << endl;
+        traverseArray(Arr, x, n);
+    }
+    else {
+        cout << "Deletion Failed";
+    }
+
+    if (deleteByIndex(Arr, x, n))
     {
         cout << "Deletion Sucessful" << endl;
         traverseArray(Arr, x, n);
