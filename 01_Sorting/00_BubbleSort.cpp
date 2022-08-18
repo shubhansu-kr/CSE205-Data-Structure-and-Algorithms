@@ -15,6 +15,28 @@ void swap(int &a, int &b)
 // Worst Case: O(n^2)
 // Avg Case: O(n^2)
 
+void bubbleSortModified(int *Arr, int N)
+{
+    // Input: Array, N -> No. of elements in the array
+    for (int i = 1; i < N; ++i)
+    {
+        int flag = 1;
+        for (int j = 0; j < N - i; ++j)
+        {
+            if (Arr[j] > Arr[j + 1])
+            {
+                swap(Arr[j], Arr[j + 1]);
+                flag = 0;
+            }
+        }
+        if (flag)
+            break;
+        // If in any pass, not a single swap is done, it means the array is
+        // sorted and we do not need to check any further, so just break out
+        // of the loop
+    }
+}
+
 void bubbleSort(int *Arr, int N)
 {
     // Input: Array, N -> No. of elements in the array
