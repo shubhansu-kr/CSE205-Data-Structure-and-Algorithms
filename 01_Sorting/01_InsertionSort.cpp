@@ -14,7 +14,7 @@ void insertionSort (int *Arr, int N) {
     for (int i = 1; i < N; ++i)
     {
         int temp = Arr[i], j = i-1;
-        while (Arr[j] > temp) {
+        while (Arr[j] > temp && j > -1) {
             Arr[j+1] = Arr[j];
             --j;
         }
