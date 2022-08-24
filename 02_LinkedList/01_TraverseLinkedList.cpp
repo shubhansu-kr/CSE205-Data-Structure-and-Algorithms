@@ -1,11 +1,7 @@
-// Creating Linked List 
+// Traverse Linked List 
 
 #include <bits/stdc++.h>
 using namespace std ;
-
-// Structure to create node 
-// Two Parts: value and pointer
-// Three Constructor: Initialise Node according to input 
 
 struct ListNode
 {
@@ -16,7 +12,7 @@ struct ListNode
     ListNode(int val, ListNode *next): val(val), next(next){}
 };
 
-int main () {
+ListNode *createList () {
     int n = 0;
     cout << "Enter the Number of Nodes in LL: ";
     cin >> n ;
@@ -38,7 +34,22 @@ int main () {
             prev = head;
         }
     }
+    return head;
+}
+
+
+void traverseList(ListNode *head) {
+    ListNode *p = head;
+    while(p) {
+        cout << p->val << " ";
+        p = p->next;
+    }
+}
+
+int main () {
     
+    ListNode *head = createList();
+    traverseList(head);
 
     return 0;
 }
