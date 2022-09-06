@@ -49,6 +49,21 @@ void traverseCLL(ListNode * head) {
     cout << endl;
 }
 
+ListNode *insertStart (ListNode*head) {
+    int x; 
+    cin >> x;
+    ListNode * p = new ListNode(x); 
+    if (head) {
+        p->next = head->next;
+        head->next = p; 
+    }
+    else {
+        p->next = p;
+        head = p;
+    }
+    return head;
+}
+
 int main () {
     
     ListNode *head = createCLL();
