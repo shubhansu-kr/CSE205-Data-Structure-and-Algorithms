@@ -53,14 +53,23 @@ ListNode *deleteFirst(ListNode *head) {
 }
 
 ListNode *deleteLast(ListNode* head) {
-    if(!head) return head;
+    if(!head || !head->next) return nullptr;
     ListNode * p = head;
-    while(p->next) {
+    while(p->next->next) {
         p = p->next;
     }
-    delete(p);
+    ListNode * x = p->next;
+    delete(x);
+    p->next = nullptr;
+    return head;
 }
 
+ListNode *deleteElement(ListNode *head) {
+    if (!head) return head;
+    int x ;
+    cin >> x; 
+    ListNode *p = head;
+}
 int main () {
     ListNode * head = createDLL();
     traverseDLL(head);
