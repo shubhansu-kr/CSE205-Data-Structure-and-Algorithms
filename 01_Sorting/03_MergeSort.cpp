@@ -25,8 +25,8 @@ void merge(int *Arr, int p, int q, int r) {
     }
     cout << "\n";
 
-    int i =0, j = 0, k = 0;
-    for (int k = 0; k < n; ++k)
+    int i = 0, j = 0;
+    for (int k = p; k < n; ++k)
     {
         if (L1[i] < L2[j]) {
             Arr[k] = L1[i++];
@@ -35,6 +35,7 @@ void merge(int *Arr, int p, int q, int r) {
             Arr[k] = L2[j++];
         }
     }
+
 }
 
 void mergeSort(int *Arr, int p, int r) {
@@ -46,8 +47,8 @@ void mergeSort(int *Arr, int p, int r) {
 }
 
 int main () {
-    int Arr[] = {0, 1, 2, 3, 4, 5};
-    mergeSort(Arr, 0, 5);
+    int Arr[] = {4, 3 ,6, 4, 7, 3, 2, 1};
+    mergeSort(Arr, 0, 7);
     for(auto it: Arr){
         cout << it << " ";
     }
