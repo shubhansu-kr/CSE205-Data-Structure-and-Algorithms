@@ -7,8 +7,8 @@ struct TreeNode {
     int val; 
     TreeNode*right, *left;
     TreeNode():val(0), right(nullptr), left(nullptr){}
-    TreeNode(int val):val(0), right(nullptr), left(nullptr){}
-    TreeNode(int val, TreeNode *right, TreeNode *left):val(0), right(right), left(left){}
+    TreeNode(int val):val(val), right(nullptr), left(nullptr){}
+    TreeNode(int val, TreeNode *right, TreeNode *left):val(val), right(right), left(left){}
 };
 
 class BST {
@@ -49,6 +49,24 @@ public:
         inOrder(root->left);
         cout << root->val << " ";
         inOrder(root->right);
+        return;
+    }
+
+    void preOrder(TreeNode *root){
+        if (!root) return;
+
+        cout << root->val << " ";
+        inOrder(root->left);
+        inOrder(root->right);
+        return;
+    }
+
+    void postOrder(TreeNode *root){
+        if (!root) return;
+
+        inOrder(root->left);
+        inOrder(root->right);
+        cout << root->val << " ";
         return;
     }
 };
