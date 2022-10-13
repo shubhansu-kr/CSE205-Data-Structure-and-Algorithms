@@ -39,7 +39,14 @@ public:
 
     void traversal(){
         if (!root) return;
+        cout << "Inorder : "  ; 
         inOrder(root);
+        cout << endl;
+        cout << "preOrder : "  ; 
+        preOrder(root);
+        cout << endl;
+        cout << "postOrder : "  ;
+        postOrder(root);
         cout << endl;
     }
 
