@@ -11,7 +11,7 @@ int partition(int *Arr, int p, int r) {
             swap(Arr[++i], Arr[j]);
         }
     }
-    swap(Arr[i++], Arr[r]);
+    swap(Arr[++i], Arr[r]);
     return i;
 }
 
@@ -24,6 +24,8 @@ void quickSort(int *Arr, int p, int r){
 
 int main () {
     int Arr[] = {6, 4, 2, 8, 5, 5};
-
+    quickSort(Arr, 0, 5);
+    for(auto &it: Arr) cout << it << " ";
+    
     return 0;
 }
