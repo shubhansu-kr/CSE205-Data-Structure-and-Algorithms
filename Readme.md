@@ -1,4 +1,9 @@
-# DSA - SEM_3
+# CSE205: Data Structure and Algorithmn
+
+Course Instructor: [Md Ataullah](https://www.linkedin.com/in/md-ataullah-041b8612)
+
+This Repo tracks the progress of DSA course i took during the third
+semester as a part of my B.Tech program.
 
 ## Documentation
 
